@@ -5,7 +5,7 @@ import { SiMongodb, SiTypescript, SiNextdotjs, SiTailwindcss, SiSupabase } from 
 
 const About = () => {
   return (
-    <section id="about" className="bg-[#ff2a2a] pt-20 pb-40 px-6 md:px-12 w-full relative overflow-hidden font-sans">
+    <section id="about" className="bg-[#ff7a1a] pt-20 pb-40 px-6 md:px-12 w-full relative overflow-hidden font-sans">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-start">
         <div className="flex flex-col items-center w-full md:w-[350px] shrink-0 mt-12 md:mt-0">
           <div data-aos="drop-bounce" className="relative flex justify-center w-full">
@@ -23,7 +23,7 @@ const About = () => {
         </div>
         <div data-aos="fade-left" data-aos-delay="200" className="flex-1 text-white mt-8 md:mt-0 relative z-20">
           <h2 className="text-4xl md:text-5xl font-black text-black mb-4">Hello!</h2>
-          <p className="text-lg font-bold mb-12 leading-relaxed max-w-3xl text-red-50">
+          <p className="text-lg font-bold mb-12 leading-relaxed max-w-3xl text-orange-50">
             Hi, I'm <span className="text-black text-xl font-black mx-1 tracking-wide uppercase">Lynn Wanjiru</span>, a full-stack developer and AI data specialist based in Nairobi, Kenya. I build production web apps with React, TypeScript, Next.js and Node.js — including POS/ERP systems like Pillar OS and PharmTrack, with real M-Pesa Daraja and PayPal payments integration. Alongside development, I do AI data annotation and QA work, drawing on my native fluency in Swahili.
           </p>
           <div className="flex items-center flex-wrap gap-8 md:gap-10 mt-8">
@@ -41,6 +41,12 @@ const About = () => {
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-12 md:h-20 fill-white">
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.62,189.5,99.8,242.79,81.82,282.88,63.6,321.39,56.44Z"></path>
         </svg>
+      </div>
+      <div className="absolute top-10 right-10 md:right-20 text-black opacity-30 animate-pulse">
+        <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0l2.5 8.5L23 12l-8.5 2.5L12 23l-2.5-8.5L1 12l8.5-2.5z"/></svg>
+      </div>
+      <div className="absolute bottom-32 left-4 md:left-20 text-black opacity-30 animate-pulse" style={{ animationDelay: '1s' }}>
+        <svg className="w-20 h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0l2.5 8.5L23 12l-8.5 2.5L12 23l-2.5-8.5L1 12l8.5-2.5z"/></svg>
       </div>
     </section>
   );

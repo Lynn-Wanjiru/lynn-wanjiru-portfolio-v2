@@ -12,7 +12,7 @@ const skills = [
   { name: 'MongoDB', icon: <SiMongodb />, color: '#47a248' },
   { name: 'MySQL', icon: <SiMysql />, color: '#4479a1' },
   { name: 'Express.js', icon: <SiExpress />, color: '#0f172a' },
-  { name: 'M-Pesa Daraja API', icon: <FaMobileAlt />, color: '#ff2a2a' },
+  { name: 'M-Pesa Daraja API', icon: <FaMobileAlt />, color: '#ff7a1a' },
   { name: 'PayPal', icon: <SiPaypal />, color: '#00457c' },
   { name: 'JavaScript', icon: <FaJsSquare />, color: '#f7df1e' },
   { name: 'HTML', icon: <FaHtml5 />, color: '#e34c26' },
@@ -29,7 +29,7 @@ const Skills = () => {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
           {skills.map((skill, i) => (
-            <div key={skill.name} data-aos="fade-up" data-aos-delay={i * 60} className="flex flex-col items-center justify-center gap-3 bg-[#f4f4f4] rounded-2xl p-6 hover:bg-[#ff2a2a] hover:text-white group transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(255,42,42,0.25)]">
+            <div key={skill.name} data-aos="fade-up" data-aos-delay={i * 60} className="flex flex-col items-center justify-center gap-3 bg-[#f4f4f4] rounded-2xl p-6 hover:bg-[#ff7a1a] hover:text-white group transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(255,122,26,0.25)]">
               <span className="text-4xl transition-colors duration-300 group-hover:text-white" style={{ color: skill.color }}>{skill.icon}</span>
               <span className="text-sm font-bold text-gray-800 group-hover:text-white text-center transition-colors duration-300">{skill.name}</span>
             </div>

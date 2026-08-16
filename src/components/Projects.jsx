@@ -43,16 +43,16 @@ const Projects = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, i) => (
-            <div key={project.title} data-aos="fade-up" data-aos-delay={i * 100} className="bg-white rounded-[1.5rem] p-8 shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(255,42,42,0.2)] hover:-translate-y-1 transition-all duration-500 flex flex-col">
+            <div key={project.title} data-aos="fade-up" data-aos-delay={i * 100} className="bg-white rounded-[1.5rem] p-8 shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(255,122,26,0.2)] hover:-translate-y-1 transition-all duration-500 flex flex-col">
               <span className="text-xl font-bold mb-2 font-serif italic text-gray-300">0{i + 1}</span>
               <h3 className="text-xl font-black text-gray-900 mb-3 tracking-tight">{project.title}</h3>
               <p className="text-sm text-gray-500 font-medium leading-relaxed mb-6 flex-1">{project.description}</p>
               <div className="flex gap-4">
                 {project.live && (
-                  <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-[#ff2a2a] hover:text-black transition font-bold text-sm">Live Demo</a>
+                  <a href={project.live} target="_blank" rel="noopener noreferrer" className="text-[#ff7a1a] hover:text-black transition font-bold text-sm">Live Demo</a>
                 )}
                 {project.github && (
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-[#ff2a2a] hover:text-black transition font-bold text-sm">GitHub</a>
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-[#ff7a1a] hover:text-black transition font-bold text-sm">GitHub</a>
                 )}
                 {!project.live && !project.github && (
                   <span className="text-gray-400 text-sm italic">Link coming soon</span>
