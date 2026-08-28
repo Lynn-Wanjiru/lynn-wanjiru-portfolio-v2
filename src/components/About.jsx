@@ -1,4 +1,3 @@
-import React from 'react';
 import stackImage from '../assets/about/dev-avatar.jpg';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiMongodb, SiTypescript, SiNextdotjs, SiTailwindcss, SiSupabase } from 'react-icons/si';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare, FaMobileAlt } from 'react-icons/fa';
 import { SiTypescript, SiNextdotjs, SiTailwindcss, SiSupabase, SiMongodb, SiMysql, SiExpress, SiPaypal } from 'react-icons/si';
 
