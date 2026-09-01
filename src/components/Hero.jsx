@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import avatarImg from '../assets/about/dev-avatar.jpg';
+import avatarImg from '../assets/about/lynn-photo.jpg';
 
 const Hero = () => {
   useEffect(() => {
@@ -11,7 +11,18 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen overflow-hidden bg-black">
       <div className="absolute top-0 left-0 w-full h-full z-0 bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#2b0a0a]" />
-      <img src={avatarImg} alt="Lynn Wanjiru" className="absolute right-0 bottom-0 h-[70%] md:h-[85%] object-contain opacity-90 z-0 pointer-events-none select-none" />
+
+      {/* Framed photo, right side */}
+      <div className="hidden md:block absolute right-8 lg:right-16 bottom-0 z-0">
+        <div className="w-[280px] lg:w-[340px] aspect-[3/4] rounded-t-[2rem] overflow-hidden shadow-[0_-20px_60px_rgba(0,0,0,0.5)] border-x border-t border-white/10">
+          <img
+            src={avatarImg}
+            alt="Lynn Wanjiru"
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
+      </div>
+
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
       <div className="absolute inset-0 z-20 px-6 pb-20 md:pb-[8%] md:px-12 max-w-7xl mx-auto flex flex-col justify-end items-start text-left w-full">
         <div className="flex flex-col items-start text-left max-w-2xl w-full">

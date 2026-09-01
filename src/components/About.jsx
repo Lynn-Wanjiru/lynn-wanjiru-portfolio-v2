@@ -1,4 +1,4 @@
-import stackImage from '../assets/about/dev-avatar.jpg';
+import stackImage from '../assets/about/lynn-photo.jpg';
 import { FaReact, FaNodeJs } from 'react-icons/fa';
 import { SiMongodb, SiTypescript, SiNextdotjs, SiTailwindcss, SiSupabase } from 'react-icons/si';
 
