@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import avatarImg from '../assets/about/Lynn photo.JPG';
+import introVideo from '../assets/about/Intro video.MP4';
 
 const Hero = () => {
   useEffect(() => {
@@ -10,23 +10,21 @@ const Hero = () => {
 
   return (
     <section className="relative w-full h-screen overflow-hidden bg-black">
-      <div className="absolute top-0 left-0 w-full h-full z-0 bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#2b0a0a]" />
+      <video
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        src={introVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-black/45 to-black/20" />
 
-      {/* Framed photo, right side */}
-      <div className="hidden md:block absolute right-8 lg:right-16 bottom-0 z-0">
-        <div className="w-[280px] lg:w-[340px] aspect-[3/4] rounded-t-[2rem] overflow-hidden shadow-[0_-20px_60px_rgba(0,0,0,0.5)] border-x border-t border-white/10">
-          <img
-            src={avatarImg}
-            alt="Lynn Wanjiru"
-            className="w-full h-full object-cover object-top"
-          />
-        </div>
-      </div>
-
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
       <div className="absolute inset-0 z-20 px-6 pb-20 md:pb-[8%] md:px-12 max-w-7xl mx-auto flex flex-col justify-end items-start text-left w-full">
         <div className="flex flex-col items-start text-left max-w-2xl w-full">
-          <h1 data-aos="fade-up" className="text-white text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+          <h1 data-aos="fade-up" className="text-white text-3xl md:text-5xl font-bold mb-4 tracking-tight drop-shadow-lg">
             Hi, I'm Lynn <br /> <span className="text-transparent [-webkit-text-stroke:1.5px_white]">Full Stack Developer & AI Data Specialist</span>
           </h1>
           <p data-aos="fade-up" data-aos-delay="200" className="text-white text-sm md:text-lg font-semibold mb-8 max-w-md drop-shadow-md">
@@ -34,7 +32,7 @@ const Hero = () => {
           </p>
           <div data-aos="fade-up" data-aos-delay="400" className="flex flex-row flex-wrap items-center gap-3 w-full">
             <a href="#projects" className="px-4 py-2 md:px-6 md:py-2 text-xs md:text-base rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 shadow-md">View My Work</a>
-            <a href="#contact" className="px-4 py-2 md:px-6 md:py-2 text-xs md:text-base rounded-full bg-black/40 border border-white text-white font-semibold hover:bg-black/60 transition-all duration-300 backdrop-blur-md">Contact Me</a>
+            <a href="https://wa.me/254796908826" target="_blank" rel="noopener noreferrer" className="px-4 py-2 md:px-6 md:py-2 text-xs md:text-base rounded-full bg-black/40 border border-white text-white font-semibold hover:bg-black/60 transition-all duration-300 backdrop-blur-md">Contact Me</a>
           </div>
         </div>
       </div>
