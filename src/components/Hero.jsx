@@ -9,9 +9,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-black">
+    <section className="relative w-full h-screen min-h-[640px] overflow-hidden bg-black">
+      {/* Soft full-screen video background so the portrait video never has to be stretched or awkwardly cropped. */}
       <video
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-50 z-0"
         src={introVideo}
         autoPlay
         muted
@@ -20,7 +21,20 @@ const Hero = () => {
         preload="metadata"
         aria-hidden="true"
       />
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black via-black/45 to-black/20" />
+
+      {/* Main video keeps its original portrait proportions and fits cleanly inside the hero. */}
+      <video
+        className="absolute inset-0 z-[1] w-full h-full object-contain object-center"
+        src={introVideo}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        aria-hidden="true"
+      />
+
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/85 via-black/35 to-black/25" />
 
       <div className="absolute inset-0 z-20 px-6 pb-20 md:pb-[8%] md:px-12 max-w-7xl mx-auto flex flex-col justify-end items-start text-left w-full">
         <div className="flex flex-col items-start text-left max-w-2xl w-full">
@@ -36,6 +50,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
       <div data-aos="fade-up" data-aos-delay="800" className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 pointer-events-none">
         <div className="animate-bounce">
           <svg className="w-6 h-6 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor">
