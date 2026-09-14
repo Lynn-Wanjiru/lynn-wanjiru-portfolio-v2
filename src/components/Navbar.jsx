@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+const WHATSAPP_URL = 'https://wa.me/254796908826';
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +29,7 @@ const Navbar = () => {
           ))}
         </div>
         <div className="hidden md:block">
-          <a href="#contact" className="px-6 py-2.5 rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-300 backdrop-blur-md">Hire Me</a>
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="px-6 py-2.5 rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-300 backdrop-blur-md">Hire Me</a>
         </div>
         <div className="md:hidden flex items-center">
           <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none p-2">
@@ -47,7 +49,7 @@ const Navbar = () => {
             <a key={link} href={`#${link.toLowerCase()}`} onClick={() => setIsOpen(false)} className="text-white hover:text-black font-bold text-lg border-b border-white/20 pb-2 transition-colors">{link}</a>
           ))}
           <div className="pt-4 pb-2">
-            <a href="#contact" onClick={() => setIsOpen(false)} className="inline-block px-6 py-3 rounded-full bg-white text-[#ff7a1a] font-black hover:bg-black hover:text-white transition-colors w-full text-center shadow-lg">Hire Me</a>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="inline-block px-6 py-3 rounded-full bg-white text-[#ff7a1a] font-black hover:bg-black hover:text-white transition-colors w-full text-center shadow-lg">Hire Me</a>
           </div>
         </div>
       </div>
